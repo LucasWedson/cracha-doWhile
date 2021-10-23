@@ -1,17 +1,19 @@
 const linksSocialMedia = {
-  facebook: 'LucasWedson',
-  instagram: 'lucaswedson',
   github: 'lucaswedson',
-  youtube: '-M-nQ_toStr1LbNnl8P92Q'
+  youtube: 'LucasWedson',
+  linkedin: 'in/lucaswedson',
+  // facebook: 'lucaswedson',
+  instagram: 'lucaswedson'
+  // twiteer: 'jakelinytec',
 }
 
 function changeSocialMediaLinks() {
   for (let li of socialLinks.children) {
     const social = li.getAttribute('class')
-    li.children[0].href = `https://${social}.com/$
-    {linksSocialMedia[social]}`
+    li.children[0].href = `https://${social}.com/${linksSocialMedia[social]}`
   }
 }
+
 changeSocialMediaLinks()
 
 function getGitHubProfileInfos() {

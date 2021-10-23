@@ -28,7 +28,7 @@ main {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-
+ 
   color: var(--grey);
 }
 
@@ -86,4 +86,10 @@ ul {
   gap: 0.5rem;
 
   justify-content: center;
+}
+
+.linkedin img{
+  width: 35px;
+  height: 35px;
+  
 }
