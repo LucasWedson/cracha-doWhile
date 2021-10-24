@@ -18,9 +18,10 @@ body {
 }
 
 main {
-  background: url(images/Background.png);
-  width: 375px;
-  height: 812px;
+  background: url(images/Background.png) no-repeat center/cover;
+  width: 100vw;
+  min-height: 812px;
+  height: 100vh;
 }
 
 .container {
@@ -28,14 +29,12 @@ main {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
- 
   color: var(--grey);
 }
 
 .avatar {
   width: 10rem;
   margin: 11.5rem auto 0;
-
   position: relative;
 }
 
@@ -55,19 +54,15 @@ main {
 
 h1 {
   font-size: 1.5rem;
-
   margin-top: 1.5rem;
 }
 
 a {
   color: var(--grey);
   text-decoration: none;
-
   margin-top: 0.25rem;
-
   display: flex;
   gap: 0.75rem;
-
   justify-content: center;
   align-items: center;
 }
@@ -78,13 +73,10 @@ p {
 
 ul {
   margin-top: 4rem;
-
   list-style: none;
   padding: 0;
-
   display: flex;
   gap: 0.5rem;
-
   justify-content: center;
 }
 
@@ -92,4 +84,81 @@ ul {
   width: 35px;
   height: 35px;
   
+}
+
+ul li a {
+  transition: 0.3s;
+}
+
+ul li a:hover {
+  transform: translateY(-8px);
+}
+
+.container #userLink:hover {
+  animation: sacudir 2s ease 0s 1 alternate-reverse both;
+}
+
+@keyframes sacudir {
+  0%,
+  100% {
+    transform: translateX(0%);
+    transform-origin: 50% 50%;
+  }
+
+  15% {
+    transform: translateX(-30px) rotate(-6deg);
+  }
+
+  30% {
+    transform: translateX(15px) rotate(6deg);
+  }
+
+  45% {
+    transform: translateX(-15px) rotate(-3.6deg);
+  }
+
+  60% {
+    transform: translateX(9px) rotate(2.4deg);
+  }
+
+  75% {
+    transform: translateX(-6px) rotate(-1.2deg);
+  }
+}
+
+@media (min-width: 720px) {
+  body {
+    background-color: #121214;
+    background-image: url(images/Desktop.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  main {
+    width: 358px;
+    height: 541px;
+    min-height: 600px;
+    margin: auto;
+    color: var(--grey-white);
+    background: url(images/Background.png) no-repeat center/cover;
+  }
+  .container {
+    margin-top: -8rem;
+  }
+  .keychain {
+    background: linear-gradient(91.6deg, #ff008cc7 33.02%, #ffcd1e 78.83%);
+    width: 90px;
+    height: 740px;
+    position: absolute;
+    margin-top: -45rem;
+    margin-left: 8.9rem;
+    z-index: 2;
+  }
+  .hole {
+    position: absolute;
+    background: #121214;
+    width: 100px;
+    height: 8px;
+    margin-top: 18px;
+    margin-left: 137px;
+  }
 }

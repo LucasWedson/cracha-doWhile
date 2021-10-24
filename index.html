@@ -15,6 +15,10 @@
   </head>
   <body>
     <main>
+      <div class="background">
+        <div class="keychain"></div>
+        <div class="hole"></div>
+      </div>
       <div class="container">
         <div class="avatar">
           <span>
@@ -34,20 +38,6 @@
         </p>
 
         <ul id="socialLinks">
-          <!-- <li class="youtube">
-            <a href="https://youtube.com/">
-              <img
-                src="images/youtube.svg"
-                alt="ícone do youtube"
-                target="_blank"
-              />
-            </a>
-          </li> -->
-          <!-- <li class="facebook">
-            <a href="https://facebook.com/" target="_blank">
-              <img src="images/facebook.svg" alt="ícone do facebook" />
-            </a>
-          </li> -->
           <li class="instagram">
             <a href="https://www.instagram.com/lucaswedson" target="_blank">
               <img src="images/instagram.svg" alt="ícone do instagram" />
@@ -60,16 +50,17 @@
               <img src="images/linkedin.png" alt="ícone do linkedin" />
             </a>
           </li>
-
-          <!-- <li class="twitter">
-            <a href="https://twitter.com/" target="_blank">
-              <img src="images/twitter.svg" alt="ícone do twitter" />
-            </a>
-          </li> -->
         </ul>
       </div>
     </main>
 
     <script src="main.js"></script>
+    <script type="text/javascript" src="animacao.js"></script>
+    <script type="text/javascript">
+      VanillaTilt.init(document.querySelector('main'), {
+        max: 7,
+        speed: 300
+      })
+    </script>
   </body>
 </html>
